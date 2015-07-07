@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Organization List</title>
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="bin/materialize.css" media="screen,projection"/>
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<main>
+    <div class="xcontainer">
+        <div id="r1" class="row">
+            <div id="r1c1" class="col s12">
+                <nav>
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo">Organizations</a>
+                        <ul id="nav-org" class="right hide-on-med-and-down">
+                            <li class="active"><a href="#">List</a></li>
+                            <li><a href="#">Search</a></li>
+                            <li><a href="#">Results</a></li>
+                            <li><a href="#">Random</a></li>
+                            <li><a href="#">Create</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+        <div id="r2" class="row">
+            <div id="r2c1" class="col s3">
+                <h5>Refine by</h5>
+                <div class="row">
+                    <div class="input-field col">
+                        <input placeholder="Search by organization name" id="orgName" type="text" class="validate">
+                        <label class="active" for="orgName">Organization Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <h6>Organization Type</h6>
+                    <div class="input-field col">
+                        <p>
+                            <input type="checkbox" id="orgTypeAll" checked="checked" disabled="disabled" />
+                            <label class="active" for="orgTypeAll">All</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="orgTypeCompany" />
+                            <label class="active" for="orgTypeCompany">Company</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="orgTypeUniversity" />
+                            <label class="active" for="orgTypeUniversity">College or University</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="orgTypeProfOrg" />
+                            <label class="active" for="orgTypeProfOrg">Professional Organization</label>
+                        </p>
+                        <p>
+                            <a id="openSelOrgType" href="#">More...</a>
+                        </p>
+
+                    </div>
+                </div>
+                <!-- market segment -->
+                <div class="row">
+                    <h6>Market Segment</h6>
+                    <div class="input-field col">
+                        <a id="openSelMktSeg" href="#">Select...</a>
+                    </div>
+                </div>
+
+                <!-- attributes -->
+                <div class="row">
+                    <h6>Attributes</h6>
+                    <div class="input-field col">
+                        <p id="attr01"><span class="blue-text">Startup<a id="d01" href="#"><i class="material-icons tiny">delete</i></a></span></p>
+                        <a id="openSelOrgAttr" href="#">Select...</a>
+                    </div>
+                </div>
+
+                <!-- Country -->
+                <div class="row">
+                    <h6>Countries</h6>
+                    <div class="input-field col">
+                        <a id="openSelOrgCountry" href="#">Select...</a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="r2c2" class="col s9">
+                <table class="bordered striped">
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Sector</th>
+                        <th>Website</th>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Boston Dynamics</a></td>
+                        <td>Company</td>
+                        <td>Private</td>
+                        <td><a target="_new" href="http://www.bostondynamics.com">www.bostondynamics.com</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Clearpath Robotics</a></td>
+                        <td>Company</td>
+                        <td>Private</td>
+                        <td><a target="_new" href="http://www.clearpathrobotics.com">www.clearpathrobotics.com</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Kuka</a></td>
+                        <td>Company</td>
+                        <td>Public</td>
+                        <td><a target="_new" href="http://www.kuka.com">www.kuka.com</a></td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">the Robot Database</h5>
+
+                <p class="grey-text text-lighten-4">Some text...</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/joehubert/theRobotDatabase">the Robot Database on GitHub</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/joehubert/theRobotDatabaseUI">the Robot Database UI on GitHub</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Terms</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2015 Copyright Text
+        </div>
+    </div>
+</footer>
+
+<div id="selMktSeg" class="modal">
+    <div class="modal-content">
+        <h5>Select Market Segments</h5>
+        <form action="#">
+            <p>
+                <input type="checkbox" id="mktSegAerospace" />
+                <label for="mktSegAerospace">Aerospace</label>
+            </p>
+            <p>
+                <input type="checkbox" id="mktSegAgriculture" />
+                <label for="mktSegAgriculture">Agriculture</label>
+            </p>
+            <p>
+                <input type="checkbox" id="mktSegDefense" />
+                <label for="mktSegDefense">Defense</label>
+            </p>
+            <p>
+                <input type="checkbox" id="mktSegHealthcare" />
+                <label for="mktSegHealthcare">Healthcare</label>
+            </p>
+            <p>
+                <input type="checkbox" id="mktSegManufacturing" />
+                <label for="mktSegManufacturing">Manufacturing</label>
+            </p>
+            <p>
+                <input type="checkbox" id="mktSegPrivateConsumer" />
+                <label for="mktSegPrivateConsumer">Private Consumer</label>
+            </p>
+            <p>
+                <input type="checkbox" id="mktSegRetail" />
+                <label for="mktSegRetail">Retail</label>
+            </p>
+            <p>
+                <input type="checkbox" id="mktSegTransportation" />
+                <label for="mktSegTransportation">Transportation</label>
+            </p>
+        </form>
+
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+</div>
+
+
+<div id="selOrgType" class="modal">
+    <div class="modal-content">
+        <h5>Select Organization Types</h5>
+        <form action="#">
+            <p>
+                <input type="checkbox" id="orgTypeCollegeUniversity" />
+                <label for="orgTypeCollegeUniversity">College/University</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgTypeCompany2" />
+                <label for="orgTypeCompany2">Company</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgTypeIncubator" />
+                <label for="orgTypeIncubator">Incubator</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgTypeProfessionalGroup" />
+                <label for="orgTypeProfessionalGroup">Professional Group</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgTypeStandardsGroup" />
+                <label for="orgTypeStandardsGroup">Standards Group</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgTypeTeam" />
+                <label for="orgTypeTeam">Team</label>
+            </p>
+        </form>
+
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+</div>
+
+<div id="selOrgAttr" class="modal">
+    <div class="modal-content">
+        <h5>Select Attributes</h5>
+        <form action="#">
+            <p>
+                <input type="checkbox" id="orgAttrStartup" />
+                <label for="orgAttrStartup">Startup</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgAttrNonProfit" />
+                <label for="orgAttrNonProfit">Nonprofit</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgAttrNotForProfit" />
+                <label for="orgAttrNotForProfit">Not-for-profit</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgAttrRbr502105" />
+                <label for="orgAttrRbr502105">RBR-50 2015</label>
+            </p>
+
+        </form>
+
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+</div>
+
+
+<div id="selOrgCountry" class="modal">
+    <div class="modal-content">
+        <h5>Select Countries</h5>
+        <form action="#">
+            <p>
+                <input type="checkbox" id="orgCountryCanada" />
+                <label for="orgCountryCanada">Canada</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryChina" />
+                <label for="orgCountryChina">China</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryDenmark" />
+                <label for="orgCountryDenmark">Denmark</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryFrance" />
+                <label for="orgCountryFrance">France</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryGermany" />
+                <label for="orgCountryGermany">Germany</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryGreece" />
+                <label for="orgCountryGreece">Greece</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryItaly" />
+                <label for="orgCountryItaly">Italy</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryJapan" />
+                <label for="orgCountryJapan">Japan</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryMexico" />
+                <label for="orgCountryMexico">Mexico</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryNetherlands" />
+                <label for="orgCountryNetherlands">Netherlands</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountrySingapore" />
+                <label for="orgCountrySingapore">Singapore</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountrySouthKorea" />
+                <label for="orgCountrySouthKorea">South Korea</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountrySpain" />
+                <label for="orgCountrySpain">Spain</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountrySweden" />
+                <label for="orgCountrySweden">Sweden</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountrySwitzerland" />
+                <label for="orgCountrySwitzerland">Switzerland</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryUnitedKingdom" />
+                <label for="orgCountryUnitedKingdom">United Kingdon</label>
+            </p>
+            <p>
+                <input type="checkbox" id="orgCountryUnitedStates" />
+                <label for="orgCountryUnitedStates">United States</label>
+            </p>
+        </form>
+
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+</div>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="bin/materialize.js"></script>
+
+<script>
+
+    $( document ).ready(function() {
+        console.log( "ready!" );
+
+        $("#attr01").hide();
+
+        $('#openSelMktSeg').on("click", function() {
+            $('#selMktSeg').openModal();
+        });
+
+        $('#openSelOrgType').on("click", function() {
+            $('#selOrgType').openModal();
+        });
+
+        $('#openSelOrgAttr').on("click", function() {
+            $('#selOrgAttr').openModal();
+            $('#attr01').show();
+        });
+
+        $('#openSelOrgCountry').on("click", function() {
+            $('#selOrgCountry').openModal();
+        });
+
+        $('#d01').on("click", function() {
+            $('#attr01').hide();
+        });
+
+
+        // Initialize collapse button
+        //$(".button-collapse").sideNav();
+        // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+        //$('.collapsible').collapsible();
+
+});
+
+
+</script>
+
+</body>
+</html>
